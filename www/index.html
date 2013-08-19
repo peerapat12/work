@@ -51,28 +51,27 @@
         alert('Compass error: ' + compassError.code);
     }
     
-    function onPrompt(results) {
-        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+    function onConfirm(buttonIndex) {
+        alert('You selected button ' + buttonIndex);
     }
 
-    // Show a custom prompt dialog
+    // Show a custom confirmation dialog
     //
-    function showPrompt() {
-        navigator.notification.prompt(
-            'Please enter your name',  // message
-            onPrompt,                  // callback to invoke
-            'Registration',            // title
-            ['Ok','Exit'],             // buttonLabels
-            'Jane Doe'                 // defaultText
+    function showConfirm() {
+        navigator.notification.confirm(
+            'You are the winner!', // message
+             onConfirm,            // callback to invoke with index of button pressed
+            'Game Over',           // title
+            'Restart,Exit'         // buttonLabels
         );
     }
 
     </script>
   </head>
   <body>
-    <p><a href="#" onclick="showPrompt(); return false;">Show Prompt</a></p>
     <div id="heading">Waiting for heading...</div>
     <button onclick="startWatch();">Start Watching</button>
     <button onclick="stopWatch();">Stop Watching</button>
+    <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
   </body>
 </html>
