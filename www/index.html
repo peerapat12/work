@@ -8,6 +8,7 @@
 
     // The watch id references the current `watchHeading`
     var watchID = null;
+    var num;
 
     // Wait for device API libraries to load
     //
@@ -43,6 +44,7 @@
     function onSuccess(heading) {
         var element = document.getElementById('heading');
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
+        num = heading.magneticHeading;
     }
 
     // onError: Failed to get the heading
@@ -55,7 +57,7 @@
         //alert('You selected button ' + buttonIndex);
         if(buttonIndex==1)
         {
-            alert('OK'); 
+            alert(num); 
         }
         
         else{
