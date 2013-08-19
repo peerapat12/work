@@ -51,7 +51,21 @@
         alert('Compass error: ' + compassError.code);
     }
     
-    
+    function onPrompt(results) {
+        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+    }
+
+    // Show a custom prompt dialog
+    //
+    function showPrompt() {
+        navigator.notification.prompt(
+            'Please enter your name',  // message
+            onPrompt,                  // callback to invoke
+            'Registration',            // title
+            ['Ok','Exit'],             // buttonLabels
+            'Jane Doe'                 // defaultText
+        );
+    }
 
     </script>
   </head>
