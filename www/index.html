@@ -69,10 +69,10 @@
     //
     function showConfirm() {
         navigator.notification.confirm(
-            'You are the winner!', // message
+            'To exit from the menu ?', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            'compass,Exit,xxx'         // buttonLabels
         );
     }
 
@@ -82,6 +82,6 @@
     <div id="heading">Waiting for heading...</div>
     <button onclick="startWatch();">Start Watching</button>
     <button onclick="stopWatch();">Stop Watching</button>
-    <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+    <p><a href="#" onclick="showConfirm(); return false;">Show compass</a></p>
   </body>
 </html>
