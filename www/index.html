@@ -28,6 +28,8 @@
         var options = { frequency: 3000 };
 
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+        alert(num); 
+        
     }
 
     // Stop watching the compass
@@ -37,6 +39,8 @@
             navigator.compass.clearWatch(watchID);
             watchID = null;
         }
+        
+        alert(num); 
     }
 
     // onSuccess: Get the current heading
@@ -70,9 +74,9 @@
     //
     function showConfirm() {
         navigator.notification.confirm(
-            'Compass', // message
+            'Show Compass', // message
              onConfirm,            // callback to invoke with index of button pressed
-            'Show Compass?',           // title
+            'Compass',           // title
             'compass,Exit'         // buttonLabels
         );
     }
