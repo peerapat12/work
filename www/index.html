@@ -9,6 +9,7 @@
     // The watch id references the current `watchHeading`
     var watchID = null;
     var num;
+    var t = '' ;
     
 
     // Wait for device API libraries to load
@@ -29,13 +30,13 @@
         var options = { frequency: 3000 };
 
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-        alert(num);
+        alert(t);
         
     }
 
     // Stop watching the compass
     //
-    function stopWatch() {
+    /*function stopWatch() {
         if (watchID) {
             navigator.compass.clearWatch(watchID);
             watchID = null;
@@ -43,7 +44,7 @@
         
         alert(num);
         
-    }
+    }*/
 
     // onSuccess: Get the current heading
     //
@@ -83,6 +84,31 @@
             'Yes,No'         // buttonLabels
         );
     }
+    
+    if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
+					t =  'N';
+				}
+				else if (num >= 22.5 && num <= 67.5) {
+					t =  'NE';
+				}
+				else if (num >= 67.5 && num <= 112.5) {
+					t =  'E';
+				}
+				else if (num >= 112.5 && num <= 157.5) {
+					t =  'SE';
+				}
+				else if (num >= 157.5 && num <= 202.5) {
+					t =  'S';
+				}
+				else if (num >= 202.5 && num <= 247.5) {
+					t =  'SW';
+				}
+				else if (num >= 247.5 && num <= 292.5) {
+					t =  'W';
+				}
+				else if (num >= 292.5 && num <= 337.5) {
+					t =  'NW';
+				}
 
     </script>
     <style>
@@ -94,9 +120,6 @@
   <body>
     <div id="heading">Waiting for heading...</div>
     <button onclick="startWatch();">Start Watching</button>
-    <button onclick="stopWatch();">Stop Watching</button>
-    <img class="needle" src="img/compass-pin.png" />
-    <img class="compass" src="img/compass-back.png" />
     <p><a href="#" onclick="showConfirm(); return false;">Exit</a></p>
   </body>
 </html>
