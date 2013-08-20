@@ -52,28 +52,28 @@
         num = heading.magneticHeading.toFixed(1);
         
         if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
-		t =  'N';
+		t =  'North';
 	}
 	else if (num >= 22.5 && num <= 67.5) {
-		t =  'NE';
+		t =  'North-East';
 	}
 	else if (num >= 67.5 && num <= 112.5) {
-		t =  'E';
+		t =  'East';
 	}
 	else if (num >= 112.5 && num <= 157.5) {
-		t =  'SE';
+		t =  'South-East';
 	}
 	else if (num >= 157.5 && num <= 202.5) {
-		t =  'S';
+		t =  'South';
 	}
 	else if (num >= 202.5 && num <= 247.5) {
-		t =  'SW';
+		t =  'South-West';
 	}
 	else if (num >= 247.5 && num <= 292.5) {
-		t =  'W';
+		t =  'West';
 	}
 	else if (num >= 292.5 && num <= 337.5) {
-		t =  'NW';
+		t =  'North-West';
 	}
 
     }
