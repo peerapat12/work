@@ -36,15 +36,13 @@
 
     // Stop watching the compass
     //
-    /*function stopWatch() {
+    function stopWatch() {
         if (watchID) {
             navigator.compass.clearWatch(watchID);
             watchID = null;
         }
         
-        alert(num);
-        
-    }*/
+    }
 
     // onSuccess: Get the current heading
     //
@@ -85,7 +83,7 @@
         );
     }
     
-    if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
+    				if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
 					t =  'N';
 				}
 				else if (num >= 22.5 && num <= 67.5) {
