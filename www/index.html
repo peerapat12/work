@@ -48,7 +48,7 @@
     //
     function onSuccess(heading) {
         var element = document.getElementById('heading');
-        element.innerHTML = 'Heading: ' + heading.magneticHeading.toFixed(1);
+        element.innerHTML = 'Compass: ' + heading.magneticHeading.toFixed(1);
         num = heading.magneticHeading.toFixed(1);
         
         if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
@@ -119,7 +119,7 @@
   </head>
   <body>
     <div id="heading">Waiting for heading...</div>
-    <button onclick="startWatch();">Start Watching</button>
+    <button onclick="startWatch();">Direction</button>
     <p><a href="#" onclick="showConfirm(); return false;">Exit</a></p>
   </body>
 </html>
