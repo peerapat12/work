@@ -9,7 +9,7 @@
     // The watch id references the current `watchHeading`
     var watchID = null;
     var num;
-    var t = '' ;
+    var t;
     
 
     // Wait for device API libraries to load
@@ -50,6 +50,32 @@
         var element = document.getElementById('heading');
         element.innerHTML = 'Heading: ' + heading.magneticHeading.toFixed(1);
         num = heading.magneticHeading.toFixed(1);
+        
+        if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
+		t =  'N';
+	}
+	else if (num >= 22.5 && num <= 67.5) {
+		t =  'NE';
+	}
+	else if (num >= 67.5 && num <= 112.5) {
+		t =  'E';
+	}
+	else if (num >= 112.5 && num <= 157.5) {
+		t =  'SE';
+	}
+	else if (num >= 157.5 && num <= 202.5) {
+		t =  'S';
+	}
+	else if (num >= 202.5 && num <= 247.5) {
+		t =  'SW';
+	}
+	else if (num >= 247.5 && num <= 292.5) {
+		t =  'W';
+	}
+	else if (num >= 292.5 && num <= 337.5) {
+		t =  'NW';
+	}
+
     }
 
     // onError: Failed to get the heading
@@ -83,31 +109,7 @@
         );
     }
     
-    				if (num >= 337.5 || (num >= 0 &&  num <= 22.5)) {
-					t =  'N';
-				}
-				else if (num >= 22.5 && num <= 67.5) {
-					t =  'NE';
-				}
-				else if (num >= 67.5 && num <= 112.5) {
-					t =  'E';
-				}
-				else if (num >= 112.5 && num <= 157.5) {
-					t =  'SE';
-				}
-				else if (num >= 157.5 && num <= 202.5) {
-					t =  'S';
-				}
-				else if (num >= 202.5 && num <= 247.5) {
-					t =  'SW';
-				}
-				else if (num >= 247.5 && num <= 292.5) {
-					t =  'W';
-				}
-				else if (num >= 292.5 && num <= 337.5) {
-					t =  'NW';
-				}
-
+    				
     </script>
     <style>
       body{
