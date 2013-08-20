@@ -8,8 +8,8 @@
 
     // The watch id references the current `watchHeading`
     var watchID = null;
-    var num=2;
-    var number_a[num]=new array[];
+    var num;
+    
 
     // Wait for device API libraries to load
     //
@@ -29,7 +29,7 @@
         var options = { frequency: 3000 };
 
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-        alert(number_a[0]); 
+        alert(num);
         
     }
 
@@ -41,7 +41,7 @@
             watchID = null;
         }
         
-        alert(numbeer_a[1]);
+        alert(num);
         
     }
 
