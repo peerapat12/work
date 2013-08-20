@@ -8,7 +8,8 @@
 
     // The watch id references the current `watchHeading`
     var watchID = null;
-    var num;
+    var num=2;
+    var number_a[num]=new array[];
 
     // Wait for device API libraries to load
     //
@@ -28,7 +29,7 @@
         var options = { frequency: 3000 };
 
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-        alert(num); 
+        alert(number_a[0]); 
         
     }
 
@@ -40,7 +41,8 @@
             watchID = null;
         }
         
-        alert(num); 
+        alert(numbeer_a[1]);
+        
     }
 
     // onSuccess: Get the current heading
@@ -83,6 +85,11 @@
     }
 
     </script>
+    <style>
+      body{
+            
+      }
+    </style>
   </head>
   <body>
     <div id="heading">Waiting for heading...</div>
