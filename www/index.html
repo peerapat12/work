@@ -61,23 +61,24 @@
         //alert('You selected button ' + buttonIndex);
         if(buttonIndex==1)
         {
-            alert(num); 
-        }
-        
-        else{
-            //alert('End main');
+            //alert(num); 
             navigator.app.exitApp();
         }
+        
+        /*else{
+            //alert('End main');
+            navigator.app.exitApp();
+        }*/
     }
 
     // Show a custom confirmation dialog
     //
     function showConfirm() {
         navigator.notification.confirm(
-            'Show Compass', // message
+            'Can you exit ?', // message
              onConfirm,            // callback to invoke with index of button pressed
-            'Compass',           // title
-            'compass,Exit'         // buttonLabels
+            'Exit',           // title
+            'Yes,No'         // buttonLabels
         );
     }
 
@@ -87,6 +88,6 @@
     <div id="heading">Waiting for heading...</div>
     <button onclick="startWatch();">Start Watching</button>
     <button onclick="stopWatch();">Stop Watching</button>
-    <p><a href="#" onclick="showConfirm(); return false;">Menu</a></p>
+    <p><a href="#" onclick="showConfirm(); return false;">Exit</a></p>
   </body>
 </html>
