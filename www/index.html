@@ -70,7 +70,7 @@
     //
     function showConfirm() {
         navigator.notification.confirm(
-            'Menu ', // message
+            'Compass', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Show Compass?',           // title
             'compass,Exit'         // buttonLabels
@@ -83,6 +83,6 @@
     <div id="heading">Waiting for heading...</div>
     <button onclick="startWatch();">Start Watching</button>
     <button onclick="stopWatch();">Stop Watching</button>
-    <p><a href="#" onclick="showConfirm(); return false;">Show Compass</a></p>
+    <p><a href="#" onclick="showConfirm(); return false;">Menu</a></p>
   </body>
 </html>
